@@ -1,0 +1,15 @@
+# Retention policy (public-safe reference)
+# NOTE: This repo models destroy semantics only. No hard-delete APIs are called.
+policies:
+  - name: "telemetry_default"
+    dataset: "aiot_telemetry"
+    retention_days: 30
+    legal_hold: false
+    delete_mode: "SIMULATED"   # SIMULATED | (production would be HARD_DELETE / CRYPTO_SHRED)
+  - name: "sensitive_device_pii"
+    dataset: "aiot_telemetry"
+    match:
+      tags_any: ["PII", "HIGH_SENSITIVITY"]
+    retention_days: 7
+    legal_hold: true
+    delete_mode: "SIMULATED"
