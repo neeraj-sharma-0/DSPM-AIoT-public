@@ -52,13 +52,12 @@ This ensures the repository is safe for **public GitHub sharing**.
 
 ---
 
-### 3. Interview-ready by design
+### 3. Explanability by design
 - Notebooks produce **deterministic outputs**
 - Clear audit logs and lifecycle transitions
 - Emphasis on **explainability** over automation
 
 This makes the architecture suitable for:
-- Technical interviews
 - Architecture walkthroughs
 - Security and governance discussions
 
